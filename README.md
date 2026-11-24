@@ -57,12 +57,6 @@ python scripts/run_evaluation.py
 pytest
 ```
 
-## Next steps with real data
-
-- Fine-tune the recogniser on impaired speech (for example TORGO or UASpeech, or in-house data) with LoRA adapters on the attention layers, and compare per-severity phoneme error rates before and after.
-- Learn the substitution weights from clinician ratings instead of setting them from features.
-- Report agreement per diagnosis group and per word type, not only overall, so weaknesses on clusters or long words are visible.
-
 ## License
 
 MIT
