@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pronscore"
+version = "0.2.0"
+description = "Phoneme-level pronunciation scoring for speech therapy exercises"
+authors = [{ name = "Peiman Ghasemi" }]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+audio = ["torch", "transformers>=4.40", "librosa"]
+dev = ["pytest"]
+
+[project.scripts]
+pronscore = "pronscore.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pronscore = ["data/*.csv"]
