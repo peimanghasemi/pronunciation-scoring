@@ -1,0 +1,1 @@
+"""German therapy word list."""
